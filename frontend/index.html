@@ -1,103 +1,200 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SmartHostel — Hostel Living, Simplified</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartHostel | Home</title>
+
+```
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: #f4f7ff;
+        color: #203154;
+    }
+
+    header {
+        background: #3159c9;
+        color: white;
+        padding: 20px 8%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    header h2 {
+        font-size: 25px;
+    }
+
+    nav {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .hero {
+        min-height: 70vh;
+        padding: 70px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero h1 {
+        font-size: clamp(32px, 5vw, 48px);
+        margin-bottom: 20px;
+    }
+
+    .hero p {
+        max-width: 650px;
+        color: #66738c;
+        line-height: 1.8;
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 14px 25px;
+        border-radius: 9px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .primary {
+        background: #3159c9;
+        color: white;
+    }
+
+    .secondary {
+        border: 1px solid #3159c9;
+        color: #3159c9;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+        padding: 20px 8% 60px;
+    }
+
+    .card {
+        background: white;
+        padding: 25px;
+        border-radius: 14px;
+        box-shadow: 0 5px 20px rgba(25, 45, 90, 0.07);
+    }
+
+    .card h3 {
+        margin-bottom: 12px;
+    }
+
+    .card p {
+        color: #66738c;
+        line-height: 1.7;
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        color: #78839a;
+        font-size: 13px;
+    }
+</style>
+```
+
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="public-header">
-    <div class="nav-container">
-      <a href="index.html" class="logo-brand">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-        SmartHostel
-      </a>
-      <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="#features">Features</a>
-        <a href="#about">About</a>
-        <a href="login.html" class="btn btn-primary">Login</a>
-      </nav>
-    </div>
-  </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Hostel Living, Simplified.</h1>
-      <p>SmartHostel brings hostel services, maintenance requests, mess information, and student communication into one centralized, transparent digital platform.</p>
-      <div class="hero-actions">
-        <a href="login.html" class="btn btn-primary">Get Started</a>
-        <a href="#features" class="btn btn-outline">Explore Features</a>
-      </div>
-    </div>
-    <div class="hero-preview">
-      <div class="preview-header">
-        <div class="dot"></div>
-        <div class="dot"></div>
-        <div class="dot"></div>
-      </div>
-      <div class="preview-body">
-        <h3 style="margin-bottom: 0.5rem; color: #fff;">Student Dashboard Preview</h3>
-        <p style="color: #94a3b8; font-size: 0.9rem;">Room: B-402 | Active Complaints: 1 | Mess: Paneer Tikka</p>
-      </div>
-    </div>
-  </section>
+<header>
+    <h2>🏠 SmartHostel</h2>
 
-  <!-- Features Section -->
-  <section id="features" class="features">
-    <div class="section-title">
-      <h2>Everything You Need in One Place</h2>
-      <p>Designed to eliminate paperwork and streamline daily hostel operations.</p>
-    </div>
-    <div class="features-grid">
-      <div class="feature-card">
-        <div class="feature-icon">⚡</div>
-        <h3>Smart Complaint Management</h3>
-        <p>Submit electrical, plumbing, or cleaning issues instantly and track progress in real-time.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🏠</div>
-        <h3>Room Information</h3>
-        <p>View your assigned room details, capacity, and roommate information securely.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🍲</div>
-        <h3>Daily Mess Menu</h3>
-        <p>Check breakfast, lunch, snacks, and dinner schedules ahead of time.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📝</div>
-        <h3>Digital Leave Requests</h3>
-        <p>Apply for weekend or emergency leaves digitally without physical logbooks.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">📢</div>
-        <h3>Instant Notices</h3>
-        <p>Never miss important hostel announcements, curfews, or event schedules.</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🔍</div>
-        <h3>Transparent Tracking</h3>
-        <p>Complete visibility into maintenance workflows from submission to resolution.</p>
-      </div>
-    </div>
-  </section>
+```
+<nav>
+    <a href="/">Home</a>
+    <a href="/complaints.html">Complaints</a>
+    <a href="/login.html">Sign In</a>
+</nav>
+```
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="logo-brand" style="color: white;">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
-        SmartHostel
-      </div>
-      <p style="color: #94a3b8; font-size: 0.9rem;">Empowering modern student housing management.</p>
+</header>
+
+<section class="hero">
+    <h1>Welcome to SmartHostel</h1>
+
+```
+<p>
+    A smarter way to manage hostel life. Report maintenance
+    issues, track complaints, and help create a cleaner,
+    safer, and more comfortable living environment.
+</p>
+
+<div class="buttons">
+    <a href="/login.html" class="button primary">Get Started</a>
+    <a href="/complaints.html" class="button secondary">
+        View Complaints
+    </a>
+</div>
+```
+
+</section>
+
+<section class="features">
+    <div class="card">
+        <h3>📝 Easy Reporting</h3>
+        <p>
+            Submit hostel maintenance complaints with a description
+            and location.
+        </p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 SmartHostel. All rights reserved. Built for Hackathon Demonstration.</p>
-    </div>
-  </footer>
+
+```
+<div class="card">
+    <h3>📋 Complaint Management</h3>
+    <p>
+        View submitted complaints and monitor their current status.
+    </p>
+</div>
+
+<div class="card">
+    <h3>🏢 Administration</h3>
+    <p>
+        Provide administrators with a central place to review
+        reported issues.
+    </p>
+</div>
+```
+
+</section>
+
+<footer>
+    © 2026 SmartHostel | Hostel Management System
+</footer>
+
 </body>
 </html>
