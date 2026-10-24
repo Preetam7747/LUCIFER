@@ -1,1 +1,0 @@
-# Route package for Smart Hostel Management System

@@ -1,32 +1,16 @@
-# Python cache files
-__pycache__/
-*.py[cod]
-*.pyo
-
-# Virtual environments
+# Python environments and cache
 venv/
 .venv/
-env/
+__pycache__/
+*.py[cod]
 
-# Environment secrets
+# Runtime database and secrets
+smarthostel.db
+smarthostel.db-shm
+smarthostel.db-wal
 .env
-.env.*
 
-# Local database
-instance/*.db
-instance/*.sqlite
-instance/*.sqlite3
-
-# Uploaded complaint files
-uploads/complaints/*
-!uploads/complaints/.gitkeep
-
-# Test and coverage files
-.pytest_cache/
-.coverage
-htmlcov/
-
-# Editor and operating system files
+# Editor / OS files
 .vscode/
 .idea/
 .DS_Store

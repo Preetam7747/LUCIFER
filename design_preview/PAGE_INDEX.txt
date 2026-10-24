@@ -1,0 +1,19 @@
+overview: Admin overview
+students: Student directory
+rooms: Room allocation
+mess: Mess & weekly menu
+payments: Mess payments
+water: Water monitoring
+electricity: Electricity monitoring
+complaints: Complaint centre
+outpasses: Outpass management
+alerts: Unified alert centre
+reports: Reports & analytics
+staff: Staff & permissions
+studenthome: Student dashboard
+studentmess: Student mess menu
+studentutilities: My utilities
+studentrequests: My requests
+notices: Notices & notifications
+settings: System settings
+login: Welcome back

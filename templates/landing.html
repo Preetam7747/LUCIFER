@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block title %}SmartHostel · Hostel life, in harmony{% endblock %}
+{% block auth_content %}
+<main class="landing-page" id="main-content" tabindex="-1">
+  <nav class="landing-nav" aria-label="Main navigation">
+    <a class="brand landing-brand" href="{{ url_for('index') }}" aria-label="SmartHostel home">
+      <span class="brand-mark">S</span>
+      <span>Smart<span class="accent">Hostel</span><small>LIVE BETTER. MANAGE SMARTER.</small></span>
+    </a>
+    <div class="landing-nav-links"><a href="#features">Platform</a><a href="#how-it-works">How it works</a><a href="{{ url_for('login') }}">Sign in</a><a class="btn primary landing-nav-cta" href="{{ url_for('register') }}">Get started <span>↗</span></a></div>
+  </nav>
+
+  <section class="landing-hero">
+    <div class="landing-copy">
+      <div class="pill landing-pill"><span class="live-dot"></span> A SMARTER WAY TO LIVE ON CAMPUS</div>
+      <h1>Hostel life,<br><span class="gradient-text">in harmony.</span></h1>
+      <p class="landing-lede">One calm, connected space for room allocation, mess updates, student requests and utility insights. Less chasing. More clarity.</p>
+      <div class="landing-actions"><a class="btn primary" href="{{ url_for('login') }}">Enter your workspace <span>→</span></a><a class="btn secondary" href="#features">Explore the platform <span>↓</span></a></div>
+      <div class="landing-proof"><div class="proof-avatars"><span>S</span><span>W</span><span>A</span></div><div><strong>One connected experience</strong><small>For students, wardens and administrators</small></div><span class="proof-separator"></span><div class="proof-status"><span class="live-dot"></span><span>Local demo ready</span></div></div>
+    </div>
+
+    <div class="landing-visual" aria-label="Illustration of a SmartHostel dashboard">
+      <div class="visual-glow"></div>
+      <div class="visual-orbit orbit-large"></div><div class="visual-orbit orbit-small"></div>
+      <div class="dashboard-preview-card">
+        <div class="preview-topline"><div class="preview-brand"><span class="preview-mark">S</span><span><strong>Good morning</strong><small>Your campus, at a glance</small></span></div><span class="preview-chip"><i></i> LIVE VIEW</span></div>
+        <div class="preview-heading"><div><small>MONDAY · CAMPUS OVERVIEW</small><h3>Your day, made easier.</h3></div><span class="preview-sparkle">✦</span></div>
+        <div class="preview-metrics"><div class="preview-metric metric-mint"><span>ROOM</span><strong>01</strong><small>Allocation hub</small><b>↗</b></div><div class="preview-metric metric-lilac"><span>MESS</span><strong>02</strong><small>Today's menu</small><b>↗</b></div><div class="preview-metric metric-peach"><span>CARE</span><strong>03</strong><small>Requests & support</small><b>↗</b></div></div>
+        <div class="preview-task"><div class="task-title"><span class="task-icon">✓</span><span><strong>Everything in one place</strong><small>Made for everyday hostel life</small></span><span class="task-arrow">↗</span></div><div class="task-line"><span></span></div><div class="task-footer"><span>Stay informed</span><span>Stay in control</span></div></div>
+      </div>
+      <div class="float-card float-water"><span class="float-icon water-icon">≈</span><div><strong>Water insights</strong><small>Track usage clearly</small></div><span class="float-check">✓</span></div>
+      <div class="float-card float-community"><span class="float-icon community-icon">✦</span><div><strong>Student-first</strong><small>Support without the chase</small></div></div>
+      <div class="visual-caption"><span>✦</span> A brighter everyday campus</div>
+    </div>
+  </section>
+
+  <section class="landing-trust-strip" aria-label="Platform highlights">
+    <div><span class="trust-icon">⌂</span><span><strong>One home base</strong><small>Useful information, together</small></span></div>
+    <div><span class="trust-icon">↗</span><span><strong>Clear workflows</strong><small>Requests with visible status</small></span></div>
+    <div><span class="trust-icon">ϟ</span><span><strong>Utility awareness</strong><small>Manual/demo readings and alerts</small></span></div>
+    <div><span class="trust-icon">◇</span><span><strong>Role-based access</strong><small>Student and staff workspaces</small></span></div>
+  </section>
+
+  <section class="landing-features" id="features">
+    <div class="section-intro"><span class="eyebrow">THOUGHTFULLY CONNECTED</span><h2>Everyday tasks.<br><span class="gradient-text">A little less complicated.</span></h2><p>Designed around the moments that matter in a hostel—from finding today's menu to keeping shared spaces running smoothly.</p></div>
+    <div class="feature-grid">
+      <article class="feature-card feature-mint"><span class="feature-number">01</span><div class="feature-symbol">⌂</div><h3>Know your space</h3><p>Keep room assignments and bed availability organized, with a clearer view for students and hostel staff.</p><span class="feature-underline"></span></article>
+      <article class="feature-card feature-lilac"><span class="feature-number">02</span><div class="feature-symbol">◷</div><h3>Stay in the loop</h3><p>Publish the mess menu and manage outpass requests and complaints through a consistent workflow.</p><span class="feature-underline"></span></article>
+      <article class="feature-card feature-peach"><span class="feature-number">03</span><div class="feature-symbol">ϟ</div><h3>Use resources wisely</h3><p>Review water and electricity readings, configure thresholds and spot records that need attention.</p><span class="feature-underline"></span></article>
+    </div>
+  </section>
+
+  <section class="landing-bottom-cta" id="how-it-works"><div class="cta-decoration">✦</div><div><span class="eyebrow">YOUR HOSTEL, ONE STEP CLOSER</span><h2>Make room for a better<br>hostel experience.</h2><p>Sign in to manage your day—or create a student account to get started.</p></div><div class="cta-actions"><a class="btn primary" href="{{ url_for('login') }}">Sign in to SmartHostel <span>→</span></a><a class="landing-text-link" href="{{ url_for('register') }}">New student? Create an account</a></div></section>
+  <footer class="landing-footer"><a class="footer-brand" href="{{ url_for('index') }}"><span class="brand-mark">S</span> SmartHostel</a><span>Designed for smoother campus living · {{ current_year }}</span><span class="footer-note">Utility data may be manually entered or simulated in this demo.</span></footer>
+</main>
+{% endblock %}
