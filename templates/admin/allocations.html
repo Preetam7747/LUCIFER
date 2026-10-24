@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %}Room Allocations | Admin{% endblock %}
+
+{% block content %}
+<h1>Room Allocations</h1>
+<p>View student room allocation records.</p>
+
+<div class="table-wrapper">
+<table>
+    <thead>
+        <tr>
+            <th>Allocation ID</th>
+            <th>Student ID</th>
+            <th>Room ID</th>
+            <th>Allocated Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for allocation in allocations|default([]) %}
+        <tr>
+            <td>{{ allocation.id }}</td>
+            <td>{{ allocation.student_id }}</td>
+            <td>{{ allocation.room_id }}</td>
+            <td>{{ allocation.allocated_at }}</td>
+            <td>{{ allocation.status }}</td>
+        </tr>
+    {% else %}
+        <tr><td colspan="5">No room allocations found.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

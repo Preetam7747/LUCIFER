@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Hostel Assistant{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Hostel Assistant</h1>
+    <p>Welcome to your Smart Hostel Assistant.</p>
+
+    <div class="card">
+        <h3>How can we help?</h3>
+        <p>Use the links below to manage your hostel activities.</p>
+        <a href="{{ url_for('student.dashboard') }}" class="button">Dashboard</a>
+        <a href="{{ url_for('student.complaints') }}" class="button">My Complaints</a>
+        <a href="{{ url_for('student.leave') }}" class="button">Leave Requests</a>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Manage Notices | Admin{% endblock %}
+
+{% block content %}
+<h1>Manage Hostel Notices</h1>
+
+<section class="dashboard-grid">
+    {% for notice in notices|default([]) %}
+        <article class="dashboard-card">
+            <h3>{{ notice.title }}</h3>
+            <p>{{ notice.content }}</p>
+            <small>Posted: {{ notice.created_at }}</small>
+        </article>
+    {% else %}
+        <p>No notices available.</p>
+    {% endfor %}
+</section>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}403 - Access Forbidden{% endblock %}
+
+{% block content %}
+<section class="section" style="text-align: center; padding: 50px 20px;">
+    <h1>403 - Access Forbidden 🔒</h1>
+
+    <p style="margin: 20px 0;">
+        Sorry, you don't have permission to access this page.
+    </p>
+
+    <a class="button" href="{{ url_for('home') }}">
+        Return to Home
+    </a>
+
+    <a class="button" href="{{ url_for('auth.login') }}">
+        Login
+    </a>
+</section>
+{% endblock %}

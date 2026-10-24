@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% block title %}Visitor Management | Admin{% endblock %}
+
+{% block content %}
+<h1>Visitor Management</h1>
+
+<div class="table-wrapper">
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Visitor Name</th>
+            <th>Student ID</th>
+            <th>Purpose</th>
+            <th>Check In</th>
+            <th>Check Out</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for visitor in visitors|default([]) %}
+        <tr>
+            <td>{{ visitor.id }}</td>
+            <td>{{ visitor.visitor_name }}</td>
+            <td>{{ visitor.student_id }}</td>
+            <td>{{ visitor.purpose }}</td>
+            <td>{{ visitor.check_in }}</td>
+            <td>{{ visitor.check_out or 'Still checked in' }}</td>
+        </tr>
+    {% else %}
+        <tr><td colspan="6">No visitor records found.</td></tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>
+{% endblock %}

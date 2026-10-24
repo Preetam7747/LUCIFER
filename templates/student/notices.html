@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}Hostel Notices{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Hostel Notices</h1>
+
+    {% for notice in notices|default([]) %}
+        <div class="card">
+            <h2>{{ notice.title }}</h2>
+            <p>{{ notice.content }}</p>
+            <small>{{ notice.created_at }}</small>
+        </div>
+    {% else %}
+        <p>No notices have been published yet.</p>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        padding: 12px 4%;
+    }
+
+    nav a {
+        display: inline-block;
+        margin-right: 12px;
+        margin-bottom: 8px;
+    }
+
+    main {
+        padding: 25px 4%;
+    }
+
+    .dashboard-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

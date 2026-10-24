@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Leave Requests{% endblock %}
+{% block content %}
+<div class="container">
+    <h1>Leave Requests</h1>
+
+    <form method="POST">
+        <label>Reason</label>
+        <textarea name="reason" required></textarea>
+
+        <label>Destination</label>
+        <input type="text" name="destination" required>
+
+        <label>Departure Time</label>
+        <input type="datetime-local" name="departure_time" required>
+
+        <label>Return Time</label>
+        <input type="datetime-local" name="return_time" required>
+
+        <button type="submit" class="button">Submit Leave Request</button>
+    </form>
+
+    <h2>Previous Requests</h2>
+    <table>
+        <thead>
+            <tr><th>Destination</th><th>Departure</th><th>Return</th><th>Status</th></tr>
+        </thead>
+        <tbody>
+        {% for leave in leave_requests|default([]) %}
+            <tr>
+                <td>{{ leave.destination }}</td>
+                <td>{{ leave.departure_time }}</td>
+                <td>{{ leave.return_time }}</td>
+                <td>{{ leave.status }}</td>
+            </tr>
+        {% else %}
+            <tr><td colspan="4">No leave requests yet.</td></tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}Assigned Complaints | Smart Hostel{% endblock %}
+
+{% block content %}
+<h1>Assigned Complaints</h1>
+<p>Review the hostel complaints available to staff.</p>
+
+<section class="section">
+    {% if complaints %}
+    <div style="overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead>
+                <tr>
+                    <th style="padding: 12px; text-align: left;">ID</th>
+                    <th style="padding: 12px; text-align: left;">Student</th>
+                    <th style="padding: 12px; text-align: left;">Title</th>
+                    <th style="padding: 12px; text-align: left;">Description</th>
+                    <th style="padding: 12px; text-align: left;">Status</th>
+                    <th style="padding: 12px; text-align: left;">Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for complaint in complaints %}
+                <tr>
+                    <td style="padding: 12px;">{{ complaint.id }}</td>
+                    <td style="padding: 12px;">
+                        {{ complaint.full_name|default('Student') }}
+                    </td>
+                    <td style="padding: 12px;">{{ complaint.title }}</td>
+                    <td style="padding: 12px;">
+                        {{ complaint.description }}
+                    </td>
+                    <td style="padding: 12px;">
+                        {{ complaint.status|replace('_', ' ')|title }}
+                    </td>
+                    <td style="padding: 12px;">
+                        {{ complaint.created_at }}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% else %}
+    <p>No complaints are currently available.</p>
+    {% endif %}
+</section>
+
+<a class="button" href="{{ url_for('home') }}">Return Home</a>
+{% endblock %}
